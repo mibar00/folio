@@ -1,0 +1,18 @@
+#This workflow will be used for building and testing the code
+name: build and test
+
+on:
+    push:
+        branches: [master]
+
+jobs:
+    build:
+        name: Build and test
+        runs-on: ubuntu-latest
+        
+        steps:
+        #Workflow needs a copy of code and must use checkout action before building and testing code
+        - name: Checkout code
+          uses: actions/checkout@v2
+        
+        
