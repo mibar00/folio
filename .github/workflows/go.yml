@@ -6,14 +6,18 @@ on:
         branches: [master]
 
 jobs:
-    build:
-        name: Build and test
+    copy:
+        name: Copy code
         runs-on: ubuntu-latest
         
         steps:
         #Workflow needs a copy of code and must use checkout action before building and testing code
      
         - uses: actions/checkout@v1
+        
+    build:
+        name: Build and test
+        needs: copy
         
         #HTML5 Validator 
        
