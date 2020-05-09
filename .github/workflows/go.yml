@@ -28,7 +28,8 @@ jobs:
         
         - run: echo hello > log_builds/logs.txt
         
-        - uses: actions/upload-artifact@v2
+        - uses: actions/upload-artifact@v1
+          if: failure()
           with:
-            name: build-artifact
-            path: log_builds/logs.txt
+            name: my-artifact
+            path: log_builds
