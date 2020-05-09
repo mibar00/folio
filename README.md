@@ -1,4 +1,4 @@
-# Portfolio Site Template
+# Folio
 
 This is a portfolio site template is a demo project. This portfolio site template is a responsive, mobile-friendly web app.
 
