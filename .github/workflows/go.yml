@@ -22,3 +22,10 @@ jobs:
             # Path of the files to test
             root: ./index.html
             format: text
+        
+        #Use Upload Build Artifact Actions to auto generate log file after running the HTML5 Validator
+        - name: Upload Build Artifact
+          uses: actions/upload-artifact@v2
+          with:
+            name: log
+            path: log.log
