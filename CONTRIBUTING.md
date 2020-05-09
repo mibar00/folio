@@ -6,7 +6,7 @@ If you have an enhancement or identified a bug, please submit the details in a G
 2. If you cannot find a GitHub issue that addressing the enhancement or bug, open a new GitHub issue. 
 3. Give a brief descriptive title
 4. In the comments section:
-..* State if the issue is an enhancement or bug 
-..* Describe how addressing the issue will help the user experience or functionality of the site 
-..* Decribe what the enhancement or bug is
-..* Decribe other important details or context
+    * State if the issue is an enhancement or bug 
+    * Describe how addressing the issue will help the user experience or functionality of the site 
+    * Decribe what the enhancement or bug is
+    * Decribe other important details or context
