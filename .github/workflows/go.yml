@@ -24,12 +24,8 @@ jobs:
             format: text
         
         #Use Upload Build Artifact Actions to auto generate log file after running the HTML5 Validator
-        - run: mkdir -p log_builds
-        
-        - run: echo hello > log_builds/logs.txt
         
         - uses: actions/upload-artifact@v1
-          if: failure()
           with:
-            name: my-artifact
-            path: log_builds
+            name: log
+            path: log.log
