@@ -17,9 +17,12 @@ jobs:
         
     build:
         name: Build and test
-        needs: copy
         
-        #HTML5 Validator 
+        needs: copy
+        runs-on: ubuntu-latest
+        #HTML5 Validator
+        
+        steps:
        
         - uses: Cyb3r-Jak3/html5validator-action@v0.4
           with:
