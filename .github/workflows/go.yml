@@ -12,12 +12,12 @@ jobs:
         
         steps:
         #Workflow needs a copy of code and must use checkout action before building and testing code
-        - name: Checkout code
-          uses: actions/checkout@v2
+     
+        - uses: actions/checkout@v2
         
         #HTML5 Validator 
-        - name: HTML5 Validator
-          uses: Cyb3r-Jak3/html5validator-action@v0.4
+       
+        - uses: Cyb3r-Jak3/html5validator-action@v0.4
           with:
             # Path of the files to test
             root: .
