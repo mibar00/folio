@@ -21,3 +21,4 @@ jobs:
           with:
             # Path of the files to test
             root: ./index.html
+            format: text
