@@ -20,7 +20,7 @@ jobs:
           uses: Cyb3r-Jak3/html5validator-action@v0.4
           with:
             # Path of the files to test
-            root: ./index.html
+            root: index.html
             format: text
         
         #Use Upload Build Artifact Actions to auto generate log file after running the HTML5 Validator
