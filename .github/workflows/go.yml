@@ -4,22 +4,24 @@ name: build and test
 on: [push, pull_request]
 
 jobs:
-    build:
-        name: build and test
-        runs-on: "ubuntu-latest"
-        #Workflow needs a copy of code and must use checkout action before building and testing code
-
-        steps:
-        -name: Checkout code
-        uses: actions/checkout@v2
-
-        -name: HTML5 Validator
-        uses: Cyb3r-Jak3/html5validator-action@v0.4.2
-        with:
-            root: "."
-        
-        -name: Log file
-        uses: actions/upload-artifact@v2
-        with:
-            name: log
-            path: log.log
+  build:
+    name: build and test
+    runs-on: "ubuntu-latest"
+    #Workflow needs a copy of code and must use checkout action before building and testing code
+    
+    steps:
+    -name: Checkout code
+    uses: actions/checkout@v2
+    
+    -name: HTML5 Validator
+    uses: Cyb3r-Jak3/html5validator-action@v0.4.2
+      with:
+      format: text
+      css: true
+      root: "."
+      
+    -name: Log file
+    uses: actions/upload-artifact@v2
+      with:
+      name: log
+      path: log.txt
