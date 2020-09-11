@@ -16,12 +16,12 @@ jobs:
     -name: HTML5 Validator
     uses: Cyb3r-Jak3/html5validator-action@v0.4.2
       with:
-      format: text
-      css: true
-      root: "."
+        format: text
+        css: true
+        root: "."
       
     -name: Log file
     uses: actions/upload-artifact@v2
       with:
-      name: log
-      path: log.txt
+        name: log
+        path: log.txt
