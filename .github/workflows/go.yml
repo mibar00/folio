@@ -1,9 +1,7 @@
 #This workflow will be used for building and testing the code
 name: build and test
 
-on:
-    pull_request:
-        branches: [review]
+on: [push, pull_request]
 
 jobs:
     build:
