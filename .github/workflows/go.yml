@@ -2,37 +2,26 @@
 name: build and test
 
 on:
-    push:
-        branches: [master]
+    pull_request:
+        branches: [review]
 
 jobs:
-    copy:
-        name: Copy code
-        runs-on: ubuntu-latest
-        
-        steps:
-        #Workflow needs a copy of code and must use checkout action before building and testing code
-     
-        - uses: actions/checkout@v1
-        
     build:
-        name: Build and test
-        
-        needs: copy
-        runs-on: ubuntu-latest
-        #HTML5 Validator
-        
+        name: build and test
+        runs-on: "ubuntu-latest"
+        #Workflow needs a copy of code and must use checkout action before building and testing code
+
         steps:
-       
-        - uses: Cyb3r-Jak3/html5validator-action@v0.4
-          with:
-            # Path of the files to test
-            root: ./index.html
-            format: text
+        -name: Checkout code
+        uses: actions/checkout@v1
+
+        -name: HTML5 Validator
+        uses: Cyb3r-Jak3/html5validator-action@v0.4.2
+        with:
+            root: .
         
-        #Use Upload Build Artifact Actions to auto generate log file after running the HTML5 Validator
-        
-        - uses: actions/upload-artifact@v1
-          with:
+        -name: Log file
+        - uses: actions/upload-artifact@v2
+        with:
             name: log
             path: log.log
